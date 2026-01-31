@@ -1,0 +1,171 @@
+/* В файле style.css пишем: */
+
+/* 1. Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Основные стили */
+body {
+    font-family: 'Courier Prime', monospace;
+    background: #0a0a0a;
+    color: white;
+    line-height: 1.6;
+}
+
+/* 3. Навигация */
+.main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    color: #ff00ff;
+}
+
+.nav-links a {
+    margin-left: 30px;
+    color: #8a2be2;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+}
+
+/* 4. Секции */
+section {
+    min-height: 100vh;
+    padding: 100px 40px 40px;
+}
+
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(61,0,0,0.6));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#science { background: #111; }
+#tradition { background: #1a0000; }
+#now { background: #0a0a0a; }
+
+/* 5. Заголовки */
+h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: #ff00ff;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    color: #8a2be2;
+    margin-bottom: 40px;
+    border-left: 5px solid #3d0000;
+    padding-left: 20px;
+}
+
+h3 {
+    color: #ff00ff;
+    margin-bottom: 15px;
+}
+
+/* 6. Карточки */
+.data-card, .step {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #3d0000;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+}
+
+/* 7. Таблица */
+.data-table .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+/* 8. Изображение */
+#now img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #8a2be2;
+    margin-top: 30px;
+}
+
+/* 9. Адаптивность */
+@media (max-width: 768px) {
+    h1 { font-size: 48px; }
+    h2 { font-size: 36px; }
+    section { padding: 80px 20px 20px; }
+}
+
+/* Добавь в конец style.css: */
+
+/* Фото с подписями */
+.photo-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.label {
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.kefir-label {
+    top: 20%;
+    left: 10%;
+    border: 1px solid #8a2be2;
+    color: #8a2be2;
+}
+
+.vape-label {
+    bottom: 30%;
+    right: 10%;
+    border: 1px solid #ff00ff;
+    color: #ff00ff;
+}
+
+/* Эффекты для шагов */
+.step:hover {
+    border-color: #ff00ff;
+    transform: translateX(10px);
+    transition: all 0.3s;
+}
+
+/* Данные в герое */
+#hero p {
+    font-size: 20px;
+    color: #8a2be2;
+    margin-bottom: 50px;
+}
+
+.scroll-hint {
+    font-size: 40px;
+    color: #ff00ff;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+}
